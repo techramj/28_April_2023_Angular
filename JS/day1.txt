@@ -1,0 +1,276 @@
+
+# Javascript
+      Front end
+      back end
+      mobile
+      desktop
+   
+
+# Front end
+   React
+   Angular
+   Vue
+
+
+# Backend:
+  Node Js
+  Non relational db
+
+
+# mobile:
+   React Native
+   Native script
+
+
+# Desktop application
+   Electron
+   popular application: slack 
+   
+   
+
+# Feature of java script
+	 Js is an interpreted language
+	    executed without compilation
+		
+		
+    2. dynamically and weakly typed
+	3. single threaded
+	
+	
+# Javascript version
+ES6  (dialect)=> browser supported JS
+ES2015
+ES2016
+
+ESnext ES2023
+ESNext
+
+# Datatype 
+   1. number
+   2. string
+   3. boolean
+   4. object
+   5. function
+   6. symbol
+   7. bigint
+   8. undefined
+
+## number
+      let natural = 1;
+      let whole = 0;
+      let decimal = 1.5;
+      let binay = 0b10101;
+      let hex = 0xA;
+      let octal = 0o71;
+      let fiveLakh = 5e6;
+
+      console.log('natural= ',natural);
+      console.log('whole= ',whole);
+      console.log('decimal= ',decimal);
+      console.log('binay= ',binay);
+      console.log('hex= ',hex);
+      console.log('octal= ',octal);
+      console.log('fiveLakh= '+fiveLakh);
+
+      //two special number in javascript 
+      1. NaN 
+      2. Infinity
+      console.log(typeof(NaN));
+
+      let num1 = 10;
+      let num2 = 10 * 'a';
+      console.log(num2, typeof(num2));
+
+      num2 = 10/0;
+      console.log(num2, typeof(num2));
+
+      console.log(typeof(Infinity));
+
+## string
+   let singleQuote ='Single Quote';
+   let doubleQuote = "Double quote";
+   let backTick  = `backTick`;
+
+## boolean
+   It has two value: true and false
+
+   falsely value
+   1. false
+   2. 0
+   3. 0n
+   4. ''  ""   ``   (empty string)
+   5. null
+   6. undefined
+   7. NaN
+
+## Object
+      let person = {
+      name:'jack',
+      age:35,
+      nationality: 'US'
+      };
+      console.log(typeof person);
+
+      //name  => key
+      //jack => value
+
+      console.log(person);
+
+      console.log('Age= '+person.age);
+      console.log('Age='+person['age']);
+
+
+      let x = 'age';
+
+      let age ='age';
+
+      console.log('Age= '+person.x);
+      console.log('Age='+person[x]);
+      console.log(person[age]);
+
+
+      let operator = {
+      '+':'plus',
+      '-':'minus',
+      '*': 'multiply',
+      '/':'divide',
+      'mod':'modulus'
+      };
+
+
+      console.log(operator);
+      console.log(operator.'*');  //cannot access special character using dot(.)
+      console.log(operator['*']);
+            
+    Note: Null is object
+
+      let person = {
+            name:'jack',
+            age:35,
+            nationality: 'US'
+            };
+
+      person.age = 40;
+      console.log(person);
+
+      person.hairColor = 'black';
+      console.log(person);
+
+      iterate the function:
+
+       let person = {
+      name:'jack',
+      age:35,
+      nationality: 'US'
+      };
+
+      for(let key in person){
+      console.log(key, person[key]);
+      }
+
+## function
+
+      //declaration 
+      function greet(){
+      console.log("Good evening");
+      }
+
+
+      function add(num1, num2){
+      return num1+num2;
+      }
+
+      //calling of functiion
+      greet();
+
+      console.log('sum of 10,20 =', add(10,20));
+
+      let res = add(111,222);
+      console.log('res= '+res);
+
+
+      //declaration 
+      function greet(){
+      console.log("Good evening");
+      }
+
+      let greet1 = function(){
+      console.log("Good evening");
+      }
+
+      let greet2 = () =>{
+      console.log("Good evening");
+      }
+
+      greet();
+      greet1();
+      greet2();
+
+      function add(num1, num2){
+      return num1+num2;
+      }
+
+      let add1 = function(num1,num2){
+      return num1+num2;
+      }
+
+      let add2 = (num1,num2) => {
+      return num1+num2;
+      }
+
+      let add3 = (num1, num2) => num1+num2;
+
+      console.log(typeof(add), typeof(add1), typeof(add2), typeof(add3));
+
+## symbol : Symbol are used for ensuring the uniqueness
+   let s1 = Symbol(10);
+   let s2 = Symbol(10);
+
+   console.log(s1==s2);
+   //difference b/w  ==    and  ===
+   ==  compare the value
+   === compare the value and the type
+
+   let a = 10;
+   let b = '10';
+   let c = "10";
+
+   console.log(a==b); //true
+   console.log(b==c); //true
+   console.log(a==c); //true
+
+
+   console.log(a===b); //false
+   console.log(b===c); //true
+   console.log(a===c); //false
+
+## bigint
+   
+   let a = 1234567890123456789;
+
+   let b = 1234567890123456789n;
+
+   console.log('a='+a);
+   console.log('b='+b);
+
+   let x = 10n;
+   let y  = x +x;
+   console.log(y);
+
+   let z = y +BigInt(1);
+   console.log(z);
+
+## undefined
+      let a;
+
+      console.log(a, typeof(a)); //undefined undefined
+
+      let person = {
+            name:'jack',
+            age:35,
+            nationality: 'US'
+            };
+
+      console.log(person.hairColor);  //undefined
+      //console.log(person1); //error
+

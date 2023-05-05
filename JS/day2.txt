@@ -1,0 +1,102 @@
+# type of vairable
+
+## Demo1
+        let a  = 10;    //block scope {} variable
+        var b = 20;     //function scope variable
+        const c = 30;   //constant variable
+        d = 40;         //global vairable
+
+        console.log(a,b,c,d);
+
+        a = 11;
+        b = 21;
+        //c = 31; //cannot reassign the value ot constant
+        d = 41;
+        console.log(a,b,c,d);
+
+## Demo2
+   function test(){
+    let a  = 10;
+    var b = 20;
+    d = 40;
+    console.log(a,b,d);
+    }
+
+    test();
+    //console.log(a);
+    //console.log(b);
+    console.log(d);
+
+
+## Demo3
+
+        function test(){
+        if(true){
+            let a = 10;
+            var b = 20;
+            console.log('a='+a);
+            console.log('b='+b)
+        }
+
+        //console.log('a='+a); //cannot access a, as a scope is block scope
+        console.log('b='+b);
+
+        if(true){
+            console.log('b='+b);
+        }
+        
+        }
+
+        test();
+
+
+# Array
+    let arr = [1,2,3,4,5];
+    //print the element of arr
+    //new array with sqare of element of arr i.e [1,4,9,16,25];
+
+
+    //way 0
+    for(let i=0;i<arr.length;i++){
+    console.log(arr[i]);
+    }
+    console.log("");
+
+    //way 1
+    for(let a of arr){
+    console.log(a);
+    }
+    console.log("");
+
+    //way 2
+    arr.forEach(function(x){
+    console.log(x);
+    });
+
+    console.log("");
+
+    //way 3
+    arr.forEach((x)=> console.log(x));
+    
+   // new array with sqare of element of arr [1,4,9,16,25];
+
+     let arr = [1,2,3,4,5];
+    //print the element of arr
+    //new array with sqare of element of arr [1,4,9,16,25];
+
+    let barr= [];
+
+    for(let x of arr){
+    barr.push(x*x);
+    }
+
+    console.log(barr);
+
+    let carr = arr.map(function(x){
+    return x*x;
+    });
+    console.log(carr);
+
+    let darr = arr.map(x=>x*x);
+    console.log(darr);
+    

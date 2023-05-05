@@ -1,0 +1,287 @@
+# object oriented pragmming in JS
+## Example1
+    class Person{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    }
+
+    let person = new Person('Jack', 34);
+    console.log(person.name, person.age);
+
+## example2
+
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        display(){
+            console.log('Name: ',this.name);
+            console.log('Age: ', this.age);
+        }
+
+        static compare(person1, person2){
+            return person1.name === person2.name 
+            && person1.age === person2.age;
+        }
+    }
+
+    let p1 = new Person('Jack', 34);
+    let p2 = new Person('Jack', '34');
+    p1.display();
+    p2.display();
+    let comp =Person.compare(p1, p2);
+    console.log(comp);
+
+## example3 
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        display(){
+            console.log('Name: ',this.name);
+            console.log('Age: ', this.age);
+        }
+        }
+
+        class Employee extends Person{
+        constructor(name,age,salary){
+            super(name,age);
+            this.salary = salary;
+        }
+
+        display(){
+            super.display();
+            console.log('Salary: ', this.salary);
+            console.log('');
+        }
+    }
+
+    let emp1 = new Employee('John', 22, 4000);
+    let emp2 = new Employee('Jessica', 23, 5000);
+
+    emp1.display();
+    emp2.display();
+
+
+## difference between class based and prototype
+
+        //class based object
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+
+            display(){
+                console.log('Name: ',this.name);
+                console.log('Age: ', this.age);
+            }
+        }
+
+
+        let p1 = new Person('jack', 22);
+        p1.display();
+
+
+        let anotherP1 = new Person('Sam', 44);
+        anotherP1.display();
+
+        //prototype based object
+        let person = {name:'Jessica', 
+                    age:23,
+                    display: function(){
+                        console.log(this.name, this.age);
+                        console.log('');
+                    }
+                    };
+
+        person.display();
+
+        console.log('-------------------------------------');
+
+        let person2 = Object.create(person);
+        console.log(person2.name);
+
+        person.name = 'Sam';
+        console.log(person2.name);
+
+        person2.name = 'Ajay';
+
+        person2.prototype
+        console.log(person2.prototype.name);
+
+
+##  To create the duplicate object
+    let person1 = {name:'Jessica', 
+                age:23,
+                display: function(){
+                    console.log(this.name, this.age);
+                    console.log('');
+                }
+                };
+
+
+
+    console.log('-------------------------------------');
+
+    let person2 = Object.assign({}, person1);
+
+    console.log(person1);
+    console.log(person2);
+
+    person1.name = 'Sam';
+
+    console.log('');
+    console.log(person1);
+    console.log(person2);
+
+
+# Built in array function
+## Splice
+   array.splice(startingIndex, removeHowManyElement, ...elementsToAdd);
+
+   let arr = [1,2,3,4,5,6,7];
+    arr.splice(2,3);  //startingIndex = 2, howManyElementTobeDeleted = 3
+    console.log(arr);
+
+    let barr = [10,20,30,40,50];
+    //want to delete 40,50 and add 1, 2,3 at the end
+    barr.splice(3,2,1,2,3);
+    console.log(barr);
+
+    let carr = [2,4,6,8,10];
+    //replace 3rd element with 60 and last element with 1
+    //output [2,4,60,8,1];
+    carr.splice(2,3,60,8,1);
+
+
+## indexOf , find, filter
+
+let arr = [1,2,3,4,5,6,7];
+let barr = [];
+for(let i of arr){
+  if(i%2 ==0 ){
+    barr.push(i);
+  }
+}
+
+console.log(barr);
+
+let carr = arr.filter(function(x){
+  return x%2 == 0;
+});
+
+console.log(carr);
+
+let darr = arr.filter((x) => x%2==0);
+console.log(darr);
+
+
+
+# ES6 feature:
+
+    test(10,20);
+
+    function test(a,b){
+    console.log(a,b);
+    }
+
+    let test1 = function(a,b){
+    console.log(a,b);
+    }
+
+    let test2 = (a,b) => {
+                        console.log(a,b);
+                        }
+
+
+    test1(10,20);
+    test2(10,20);
+
+
+# spread operator
+  //spread operator ...
+    let person = {name:'Jack'};
+    let employee = {salary: 1000};
+
+    let empPerson = {...person, ...employee};
+    console.log(empPerson);
+
+    //spread operator for an array
+
+    let arr = [1,2,3];
+
+    function add(a,b,c){
+    let res = a+b+c;
+    console.log('sum= '+res);
+    }
+
+    add(arr[0], arr[1], arr[2]);
+    add(...arr);
+
+    let barr =[2,4,20,...arr,400];
+    console.log(barr);
+
+
+## object destructuring
+
+
+    let person = {name:'Jack',age:23, nationality:'US'};
+
+    let name = person.name;
+    let age = person.age;
+    let nationality = person.nationality;
+
+    console.log(name,age,nationality);
+
+    OR 
+
+    let person = {name:'Jack',age:23, nationality:'US'
+    let {name,age , nationality} = person;
+    console.log(name,age,nationality);
+
+### destructuring array
+
+    let arr =[1,2,3,4,5];
+
+    let a = arr[0];
+    let b = arr[1];
+    let c = arr[2];
+
+    OR
+
+    let arr =[1,2,3,4,5];
+
+    let [a,b,c] = arr;
+    console.log(a,b,c);
+
+
+
+### structuring of an object
+
+    let name = 'Sam';
+    let age = 23;
+
+    let person = {name,age};
+    console.log(person);
+
+
+### 
+    let test = function(a,b,c=10){
+    console.log(a,b,c);
+    }
+
+    //test();
+    //test(1);
+    //test(1,2);
+    test(1,2,null);
+    test(1,2,undefined);
+
+
+
