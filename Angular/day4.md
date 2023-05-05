@@ -18,6 +18,7 @@
 	  ng new 01-my-first-project
 
 # run the project
+    cd project_name (before running ng serve, you should be in the project)
   	ng serve
 
 # stop the project
@@ -56,3 +57,34 @@
 	  cd ..           => move to the parent folder
 	  cls             => clear the screen
   
+
+ 
+# Component
+		ng generate component <component-name>
+		ng g c <component-name>
+
+		eg: ng g c person
+
+		CREATE src/app/person/person.component.html 
+		CREATE src/app/person/person.component.spec.ts
+		CREATE src/app/person/person.component.ts
+		CREATE src/app/person/person.component.css
+		UPDATE src/app/app.module.ts
+
+		# person.component.ts
+		@Component({
+		selector: 'app-person',
+		templateUrl: './person.component.html',
+		styleUrls: ['./person.component.css']
+		})
+
+
+# install bootstrap
+    step 1:
+		npm install --save bootstrap@3
+	step 2: add the path in angular.json file
+		"styles": [
+				"node_modules/bootstrap/dist/css/bootstrap.min.css",
+				"src/styles.css"
+				],
+
