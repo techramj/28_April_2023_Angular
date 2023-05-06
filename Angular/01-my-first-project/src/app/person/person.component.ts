@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-person',
@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent {
 
-  name ='Jessica';
-  age  = '22';
-  nationality = "US";
-
+  @Input('firstName') name:string ='';
+  @Input() age:string  = '';
+  @Input() nationality:string = "";
 
 }
