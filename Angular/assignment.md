@@ -11,4 +11,31 @@
         Hint:
         <app-employee id="1" name="Jay"></app-employee>
 
+        ng new assignement-one
+        cd assignement-one
+        ng g c person
+        ng g c employee
+
+        install the bootstrap
+
            
+# Two
+  create the project assignment-02
+  create 3 componenet 
+  comp-a as element selector
+  comp-b as property selector
+  comp-c as class selector
+
+  call this component on selector-example component.
+
+  call selector-example component in app component.
+
+
+  create person and people component.
+  
+  call app-people in app-component.
+
+  call app-person in people.html
+
+  
+

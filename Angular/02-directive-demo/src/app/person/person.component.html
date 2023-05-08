@@ -1,0 +1,10 @@
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <h3 *ngIf="name; else noNameBlock">Welcome {{name}}!</h3>
+      <ng-template #noNameBlock>
+        <h3>Welcome!</h3>
+      </ng-template>
+    <p *ngIf="age">Age: {{age}}</p>
+    <p *ngIf="nationality">Nationality: {{nationality}}</p>
+  </div>
+</div>

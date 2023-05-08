@@ -89,4 +89,42 @@
 				],
 
 
-#
+# Derictive demo  (structural directive)
+    *ngIf
+	*ngFor
+ 	refer exp -02
+
+	step 1: create two component
+			person
+			persons
+
+
+# Selector
+	1. Element Selector
+		@Component({
+		selector: 'app-selector-a',
+		templateUrl: './person.component.html',
+		styleUrls: ['./person.component.css']
+		})
+
+		<app-selector-a></app-selector-a>
+
+	2. property Selector
+		@Component({
+		selector: '[app-selector-a]',
+		templateUrl: './person.component.html',
+		styleUrls: ['./person.component.css']
+		})
+
+		<div app-selector-a></div>
+
+		
+	
+	3. Class Selector
+		@Component({
+		selector: '.app-selector-a',
+		templateUrl: './person.component.html',
+		styleUrls: ['./person.component.css']
+		})
+
+		<div class='app-selector-a'></div>

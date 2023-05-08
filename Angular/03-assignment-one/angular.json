@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "02-directive-demo": {
+    "03-assignment-one": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/02-directive-demo",
+            "outputPath": "dist/03-assignment-one",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "02-directive-demo:build:production"
+              "browserTarget": "03-assignment-one:build:production"
             },
             "development": {
-              "browserTarget": "02-directive-demo:build:development"
+              "browserTarget": "03-assignment-one:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "02-directive-demo:build"
+            "browserTarget": "03-assignment-one:build"
           }
         },
         "test": {
@@ -100,6 +100,6 @@
     }
   },
   "cli": {
-    "analytics": "b1f467a5-7fcb-4708-8fa8-b44fc12ab448"
+    "analytics": "8861c6eb-aee6-46d5-899f-2f6e1257fe41"
   }
 }

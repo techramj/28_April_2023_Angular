@@ -1,0 +1,33 @@
+  <!--
+    <div class="panel panel-primary"  *ngFor="let person of people">
+    <div class="panel-body" >
+      <h3 >Welcome {{person.name}}!</h3>
+      <p >Age: {{person.age}}</p>
+      <p >Nationality: {{person.nationality}}</p>
+    </div>
+  </div>
+
+-->
+
+<div *ngFor="let person of people">
+    <app-person
+    name={{person.name}}
+    age ={{person.age}}
+    nationality={{person.nationality}}
+    ></app-person>
+</div>
+
+<!--
+<app-person
+ name="Jack"
+ age="23"
+ nationality="US"></app-person>
+<app-person name="Jackie" age="25" nationality="UK"></app-person>
+-->
+
+
+
+
+
+
+
