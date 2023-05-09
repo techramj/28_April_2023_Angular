@@ -1,0 +1,7 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">List of Person</div>
+  <div class="panel-body" *ngFor="let p of people">
+    <app-person name={{p.firstName}}  age={{p.age}}></app-person>
+  </div>
+</div>
+

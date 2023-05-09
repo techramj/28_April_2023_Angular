@@ -37,5 +37,21 @@
 
   call app-person in people.html
 
+  solution:
+  step 1: 
+    ng new <project-name>
+    cd <project-name>
+
+   step 2: add bootstrap
+    npm install --save bootstrap@3
+
+    add the path of bootstrap in angular.json in style properties
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+   step 3: add componenet
+   ng g c comp-a
+   ng g c comp-b
+   ng g c comp-c
+
   
 
