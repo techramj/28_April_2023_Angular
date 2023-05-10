@@ -1,0 +1,11 @@
+<div class="container">
+  <button class="btn btn-success"  (click)="addEmployee()">Add Employee</button>
+  <button class="btn btn-danger"  (click)="removeEmployee()">Remove Employee</button>
+  <br>
+  <br>
+
+  <div *ngFor="let e of empList">
+    <app-emp [emp]="e"></app-emp>
+  </div>
+</div>
+

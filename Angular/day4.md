@@ -128,3 +128,36 @@
 		})
 
 		<div class='app-selector-a'></div>
+
+
+
+Binding: (05-binding-example)
+   Data binding means communication
+
+   ts										html(Template)
+   person.component.ts						person.comp.html	
+								
+                    ---------------------->	
+					string interpolation {{}}
+					property binding  [property]='data'
+	
+     name = 'Jack';								{{name}}
+
+
+	                <--------------------------- 
+					event binding (event)='expresion'
+
+
+
+					<--------------------------------->
+					   two way binding
+					   [(ngMode)]='data'                  
+
+
+		step 1: create new project
+			ng new 05-binding-example
+			cd 05-binding-example
+
+		step 2: install bootstrap
+		    npm install --save bootstrap@3
+			add the path of boostrap in angular.json

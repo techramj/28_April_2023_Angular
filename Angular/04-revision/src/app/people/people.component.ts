@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class PeopleComponent  {
 
    people = [
-    {firstName:'Jay', age:10},
-    {firstName:'Jaya', age:60},
+    {firstName:'Jay', age:''},
+    {firstName:'Jaya', age:''},
     {firstName:'Jayant', age:60},
     {firstName:'Jatayu', age:1000},
    ]
