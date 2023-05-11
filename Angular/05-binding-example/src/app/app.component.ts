@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '05-binding-example';
+  servers = [
+    {name:'dbserver', status:'online'},
+    {name:'Frontend Server', status:'online'},
+    {name:'Backend Server', status:'offline'},
+   ];
+
 }

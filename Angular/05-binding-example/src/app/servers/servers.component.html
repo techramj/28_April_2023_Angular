@@ -1,0 +1,8 @@
+<button class="btn btn-block btn-success" (click)="addServer()">Add Server</button>
+<br>
+<button class="btn btn-block btn-danger" (click)="deleteServer()">Delete Server</button>
+<br>
+<div class="container" *ngFor="let s of servers">
+  <app-server [server]="s" ></app-server>
+</div>
+

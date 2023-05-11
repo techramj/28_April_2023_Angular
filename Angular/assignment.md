@@ -55,3 +55,15 @@
 
   
 
+# Three
+ create  two component
+ component1: servers
+   list of servers
+   call the server component from the servers
+
+   add two button Add Server and Delete Server
+
+
+ componenet 2: server
+   serverName
+   serverStatus
