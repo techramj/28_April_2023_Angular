@@ -67,3 +67,32 @@
  componenet 2: server
    serverName
    serverStatus
+
+
+# Four
+  component: ButtonCounter
+  Button=> Click ME
+  <p>You clicked <click count> times.</p>
+
+
+  component: Banner
+  <p>Congratulation!, You clicked button 10 Times. Eligible for Silver Batch</p>
+  <p>Congratulation!, You clicked button 20 Times. Eligible for Golden Batch</p>
+  <p>Congratulation!, You clicked button 30 Times. Eligible for Platinum Batch</p>
+
+
+  app.component
+  <app-banner>
+  <app-button-counter>
+______________________________________________________________________________________
+output:
+
+  Congratulation!, You clicked button 19 Times. Eligible for Silver Batch.
+  BUTTON
+  You clicked 19 times.
+
+  ----------------------------------------------------------------------------
+
+  Congratulation!, You clicked button 20 Times. Eligible for Golden Batch.
+  BUTTON
+  You clicked 20 times.
