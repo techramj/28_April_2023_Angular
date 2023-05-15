@@ -113,3 +113,41 @@ output:
 
     Banner.ts
      
+
+# Five
+
+      Button-counter
+
+      Banner
+
+      Button-Banner-comp
+        <app-banner>
+        <app-button-counter>
+        
+        
+      app-compoenent
+        <app-button-banner></app-button-banner>
+
+
+# Six
+    servers
+      servers=[];
+      Add Server(button)
+
+      for{
+        <app-server> </app-server>
+      }
+
+    server
+       Name
+       status
+
+
+    servers-example-component
+    servers = [
+      {name:'', status:'online'}
+    ];
+
+    <app-servers>
+
+    
