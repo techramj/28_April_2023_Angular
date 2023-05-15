@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button-counter',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonCounterComponent  {
 
-   buttonCounter:number = 0;
+   @Input() buttonCounter:number = 0;
 
 
    updateButtonCOunt(){

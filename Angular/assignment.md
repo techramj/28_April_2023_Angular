@@ -96,3 +96,20 @@ output:
   Congratulation!, You clicked button 20 Times. Eligible for Golden Batch.
   BUTTON
   You clicked 20 times.
+
+  App.comp.html
+    <button>Click Me</button>
+     <app-banner></>
+     <app-button-counter></>
+
+
+    ButtonCounter.html
+
+    ButtonCounter.ts
+       buttonCounter;
+
+
+    Banner.html
+
+    Banner.ts
+     

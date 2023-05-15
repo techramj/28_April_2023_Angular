@@ -161,3 +161,86 @@ Binding: (05-binding-example)
 		step 2: install bootstrap
 		    npm install --save bootstrap@3
 			add the path of boostrap in angular.json
+
+
+
+App.component.html
+<app-banner [countButtonInBanner]='count'>
+  button
+<app-button-counter  [counter]='count'>
+App.component.ts
+count:0
+
+Button-counter
+ 
+   <p>{{Button count}}</p>
+ts:
+ @Input() counter:1
+
+
+Banner
+<p *ngIf = "count>=10 && count<20">Congratulation!, You clicked button 10 Times. </p>
+<p *ngIf = "count>=20 && count<30">Congratulation!, You clicked button 20 Times. </p>
+<p *ngIf="count>=30">Congratulation!, You clicked button 30 Times. </p>
+ts
+ countButtonInBanner
+
+
+
+
+
+
+
+
+
+
+app.component.ts
+    test1(){
+	  this.title ="Output Decorator example!";
+	}
+	
+	
+	test2(str:string){
+		this.title = str;
+	}
+
+
+
+
+app.compoenent.html
+		<app-event-example 
+			(event1)="test1()"
+		></app-event-example>
+		
+		<app-another-event-example
+			(event2)="test2($event)"
+		></another-event-example>
+
+
+
+
+
+		comp1: event-example
+			<button class="btn btn-primary" (click)="onButtonClick()">Event Example</button>
+		
+		 event-example.ts
+		 @Output() event1:EventEmmiter<any> = new EventEmmiter<>();
+		 
+		 onButtonClick(){
+			this.event1.emit();
+		 }
+		
+		
+		
+		
+		comp2: another-event-example
+		 <button class="btn btn-primary" (click)="onButtonClick()">Another Event Example</button>
+		 
+		 
+		 another-event-example.ts
+		  title:string ="Another event example ";
+		  @Output() event2:EventEmmiter<string> = new EventEmmiter<string>();
+		  
+		  onButtonClick(){
+			this.event2.emit(this.title);
+		 }

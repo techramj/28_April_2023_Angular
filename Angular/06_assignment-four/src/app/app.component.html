@@ -1,10 +1,7 @@
 
-<app-banner></app-banner>
-<app-button-counter></app-button-counter>
-
-
-
-
+<app-banner [count]="count"></app-banner>
+<button class="btn btn-primary" (click)="onButtonClick()">Click Me</button>
+<app-button-counter [buttonCounter]="count"></app-button-counter>
 
 
 <router-outlet></router-outlet>

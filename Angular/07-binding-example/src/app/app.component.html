@@ -1,0 +1,24 @@
+
+<h3 align="center">{{title}}</h3>
+<app-event-example
+(buttonEvent)="buttonClick()" ></app-event-example>
+
+<br>
+<br>
+
+<app-event-another-example
+(buttonEvent)="test2($event)"
+></app-event-another-example>
+
+<hr>
+<br>
+
+<p>The value of count in app.component = {{count}}</p>
+<app-banner [count]="count"></app-banner>
+<app-button-counter [buttonCount]="count"
+(clickEvent)="updateCount()"
+></app-button-counter>
+
+
+
+<router-outlet></router-outlet>
