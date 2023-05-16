@@ -120,7 +120,7 @@ output:
 
       Banner
 
-      Button-Banner-comp
+      Button-Banner
         <app-banner>
         <app-button-counter>
         
