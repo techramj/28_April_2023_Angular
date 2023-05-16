@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent  {
 
-   servers:{name:string,status:string}[] =[
+   @Input() servers:{name:string,status:string}[] =[];
 
-   ];
+   @Output() buttonEvent: EventEmitter<{name:string, status:string}> = new EventEmitter<{name:string, status:string}>()
+
+
+   onButtonClick(){
+    let name = 'Server-'+(this.servers.length+1);
+    let status = Math.random()>0.5?'online':'offline';
+    this.buttonEvent.emit({name,status});
+   }
 
 
 }

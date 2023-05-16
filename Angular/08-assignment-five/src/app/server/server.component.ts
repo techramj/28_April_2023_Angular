@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-server',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent  {
-    server:{name:string, status:string} = {name:'', status:'offline'};
+    @Input() server:{name:string, status:string} = {name:'', status:'offline'};
 }

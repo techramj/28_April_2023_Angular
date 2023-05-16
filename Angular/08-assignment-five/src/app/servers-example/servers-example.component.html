@@ -1,4 +1,6 @@
 
-<app-servers></app-servers>
+<app-servers [servers]="sampleServers"
+(buttonEvent)="addServer($event)"
+></app-servers>
 
-<h3>The size of array is {{servers.length}}</h3>
+<h3>The size of array is {{sampleServers.length}}</h3>
