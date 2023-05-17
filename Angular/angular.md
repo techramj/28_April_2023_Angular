@@ -244,3 +244,36 @@ app.compoenent.html
 		  onButtonClick(){
 			this.event2.emit(this.title);
 		 }
+
+
+# Routing: 
+
+    Routing in angualar allows users to create the SPA with multiple views and allow to navigate between them. 
+
+	Users can switch between the views without losing the application state and properties.
+
+	
+
+step 1: go to app-routing.module.ts
+
+  server-example  /servers
+  button-banner  /button-banner
+
+step 2: add the path mapped with component in Routes array
+
+		const routes: Routes = [
+			{path:'servers', component: ServersExampleComponent},
+			{path:'button-banner', component: ButtonBannerComponent}
+		];
+
+step 3: for the wrong url, if you want display specific page then add the below mapping in Routes array
+    {path:'**', component:PageNotFoundComponent}
+
+step 4: If you want the base url to redirect to homepage then add the below mapping in Routes array
+
+usecase: pathvaraible
+  /greet/:name
+
+
+usercase:navigate to another page programitically
+refer to example 08/greet component

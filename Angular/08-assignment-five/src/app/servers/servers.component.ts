@@ -13,6 +13,7 @@ export class ServersComponent  {
 
 
    onButtonClick(){
+    console.log('onButtonClick clicked');
     let name = 'Server-'+(this.servers.length+1);
     let status = Math.random()>0.5?'online':'offline';
     this.buttonEvent.emit({name,status});

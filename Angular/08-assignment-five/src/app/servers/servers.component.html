@@ -2,7 +2,7 @@
 <div class="panel panel-danger" >
   <div class="panel-heading">Servers Component</div>
   <br>
-  <button class="btn btn-primary" (click)="onButtonClick()">Add Server</button><br><br>
+  <button class="btn btn-primary" (onclick)="onButtonClick()">Add Server</button><br><br>
   <div class="panel-body" *ngFor="let item of servers">
       <app-server [server]="item"></app-server>
   </div>
