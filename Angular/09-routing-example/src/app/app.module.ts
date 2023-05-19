@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { GreetComponent } from './greet/greet.component';
 import { FarewellComponent } from './farewell/farewell.component';
+import { QueryparamComponent } from './queryparam/queryparam.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { FarewellComponent } from './farewell/farewell.component';
     HeaderComponent,
     LoginComponent,
     GreetComponent,
-    FarewellComponent
+    FarewellComponent,
+    QueryparamComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

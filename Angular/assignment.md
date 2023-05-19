@@ -150,4 +150,19 @@ output:
 
     <app-servers>
 
-    
+
+# Seven
+  
+  /server-example
+
+  /button-banner
+
+  /wrong-url => call page_not_found component
+                <button>GO To Home Page</button>
+
+                create the link and redirect to home page
+
+  add the navbar and create link for homepage,server-example,button-banner
+
+
+  QueryParam example  

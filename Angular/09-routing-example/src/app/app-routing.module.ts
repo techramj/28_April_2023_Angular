@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { GreetComponent } from './greet/greet.component';
 import { FarewellComponent } from './farewell/farewell.component';
+import { QueryparamComponent } from './queryparam/queryparam.component';
 
 const routes: Routes = [
   {path:'servers', component: ServersExampleComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'greet/:name', component:GreetComponent},
   {path:'bye', component:FarewellComponent},
+  {path:'query-example', component: QueryparamComponent},
   {path:'', redirectTo:'login',  pathMatch:'full'},
   {path:'**', component:PageNotFoundComponent}
 ];
