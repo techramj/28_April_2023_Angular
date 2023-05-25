@@ -68,3 +68,35 @@
 
 
     */
+# Example (promise example 1)
+        import { Component, OnInit } from '@angular/core';
+
+        @Component({
+          selector: 'my-app',
+          templateUrl: './app.component.html',
+          styleUrls: ['./app.component.css']
+        })
+        export class AppComponent implements OnInit {
+          name = 'Angular ';
+
+          ngOnInit(){
+            this.name = 'Jack';
+            console.log('init method called!!!!');
+            const promise1 = new Promise(resolve=>{
+              setTimeout(()=>{
+                resolve('promised called!!!');
+                this.name = 'Sam';
+              }, 5000);
+            });
+
+            console.log('promise object created!!!!');
+            promise1.then(res=>{
+              console.log('res= ',res);
+            });
+
+            console.log('init method end!!!!');
+
+          }
+
+        }
+
