@@ -99,4 +99,34 @@
           }
 
         }
+        
+# Example (Observable example1)
+import { Component, OnInit } from '@angular/core';
+import {  Observable } from 'rxjs';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+  name = 'Angular ' ;
+  
+  ngOnInit(){
+    console.log('init method start!!!');
+    const observ1 = new Observable(subscribe=>{
+      console.log('Inside Observable function!!!!');
+      setTimeout(()=>{
+        subscribe.next('obserable1 called!!!');
+      }, 5000);
+    });
+    
+    observ1.subscribe(data=>{
+      console.log('data=>',data);
+    });
+    
+    console.log('init method end!!');
+    
+  }
+}
 
