@@ -166,3 +166,21 @@ output:
 
 
   QueryParam example  
+          
+            
+# Assignement:
+  
+    app.component.html
+       button>click</button>
+    
+
+    app.component.ts  
+    x
+    //on the click of button assing the random value between 0 to 9
+     x = 6
+
+     you have to click button 10 times and you need to tell how many times the values changes from even to odd.
+     x= 2 3 4 6 5 7 5 5 9 8 
+     ans => 3
+
+     => ngOnChanges() properties         
