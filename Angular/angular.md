@@ -277,3 +277,35 @@ usecase: pathvaraible
 
 usercase:navigate to another page programitically
 refer to example 08/greet component
+
+
+
+
+# Lifecycle
+  1.  ngOnChanges => called after a bound input property changes.
+   
+		app.componenet.ts
+			name = 'abc';
+		app.componenet.html
+			<app-server [servername]='name'  ></app-server>
+
+		server.html
+		    <a routerLink="/button-banner>
+		server.ts
+			@Input() servername:string = '';
+
+			 ngOnChanges(changes: SimpleChanges): void {
+				console.log('ngOnChanges called ',changes);
+			}
+
+ 2. ngOnInit
+      app-routing.module.ts
+	  {"path","/server", componenet: }
+	  {"path","/button-banner", componenet: }
+
+	  app.component.html
+	    <a href="/server">Server Example</a>
+		<a routerLink="/server">Server Example</a>
+
+	ng g c page1
+	ng g c page2
