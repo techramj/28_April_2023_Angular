@@ -309,3 +309,83 @@ refer to example 08/greet component
 
 	ng g c page1
 	ng g c page2
+
+
+
+
+
+# create the dummy database
+		step 1: create the folder eg. 13_emp_db_server
+		        mkdir 13_emp_db_server
+		step 2: open the command prompt (path will be the folder path)
+		        cd 13_emp_db_server
+		step 3: execute the below command
+		        npm init -y
+		step 4: create the json file(eg emp.json)
+		step 5: add arrays of an object employees
+		        eg:
+				{
+				"employees": [
+						{
+							"id":1,
+							"name": "Tony",
+							"email" : "tony@gmail.com",
+							"salary" : 5000
+						},
+						{
+							"id":2,
+							"name": "Sam",
+							"email" : "sam@gmail.com",
+							"salary" : 8000
+						}
+					]
+				} 
+
+
+		step 6: npm install -g json-server
+		step 7: add the below line in package.json scripts object
+		        "start" : "npx json-server --watch emp.json",n
+
+		step 8: excute below command
+		        npm start
+
+
+		step 9: open postman
+		fetch all data:
+			url: http://localhost:3000/employees
+			method: get
+		
+		fetch particular data
+		    url: http://localhost:3000/employees/:id
+			method: get
+
+		add one record
+		     url: http://localhost:3000/employees
+			 method: post
+			 body: (raw(json))
+			 {
+				"name": "Priyanka",
+				"email": "priyanka@gmail.com",
+				"salary": 17000
+			 }
+
+		delete record
+		    url: http://localhost:3000/employees/:id
+			method: delete
+
+	    update record
+		    url: http://localhost:3000/employees/:id
+			method: put
+			body: update data in json format
+			{
+				"id": 3,
+				"name": "John",
+				"email": "john@gmail.com",
+				"salary": 7000
+			}
+
+			
+							
+
+
+
