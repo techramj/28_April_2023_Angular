@@ -384,7 +384,10 @@ refer to example 08/greet component
 				"salary": 7000
 			}
 
-			
+
+
+# Forms
+		step 1: import FormsModule in app.module.ts 
 							
 
 
