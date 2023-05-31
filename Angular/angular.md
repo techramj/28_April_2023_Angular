@@ -388,6 +388,8 @@ refer to example 08/greet component
 
 # Forms
 		step 1: import FormsModule in app.module.ts 
+		step 2: register using ngModel
+		
 							
 
 

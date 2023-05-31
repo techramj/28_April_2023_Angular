@@ -184,3 +184,30 @@ output:
      ans => 3
 
      => ngOnChanges() properties         
+
+
+# Assignment 7:
+
+  Registration Form:
+
+  First Name: mandatory
+  Last Name
+  Email : mandatory
+  Gender : mandatory
+  Password:  
+  Confirm Password:
+  Secret Question: drop down
+  Answer:
+  button
+
+  Registered Successfully:
+  First name: Jack
+  Last Name: Johnson
+  Email: 
+  Gender:
+  password: ***
+  Secret Question: 
+  Answer: 
+
+
+

@@ -1,0 +1,16 @@
+<div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset">
+      <app-new-account
+      (accoutAdded) ="addAccount($event)"
+      ></app-new-account>
+    </div>
+    <hr>
+      <app-account *ngFor="let item of accounts;let i=index"
+      [account]="item"
+      [id]="i"
+      (statusChanged)="onStatusChanged($event)"
+      ></app-account>
+  </div>
+
+</div>
