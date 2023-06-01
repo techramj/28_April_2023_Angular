@@ -1,0 +1,12 @@
+<p>account works!</p>
+<div class="row container">
+  <div class="col-xs-12 col-md-8 col-md-offset">
+    <h4>{{account.name}}</h4>
+    <p>status: {{account.status}}</p>
+    <button class="btn btn-success" (click)="setStatus('active')" >Set to 'Active'</button>
+    <button class="btn btn-primary" (click)="setStatus('inactive')">Set to 'Inactive'</button>
+    <button class="btn btn-danger" (click)="setStatus('hidden')">Set to 'hidden'</button>
+    <hr>
+  </div>
+
+</div>
