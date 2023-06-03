@@ -1,1 +1,32 @@
-<p>emp-list works!</p>
+<div class="container">
+  <div>
+    <h3 class="mb-3-text-center">Employee Details</h3>
+    <div class="col-md-12">
+       <table class="table table-bordered">
+         <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Action</th>
+         </thead>
+         <tbody>
+           <tr *ngFor="let emp of employees">
+             <td>{{emp.id}}</td>
+             <td>{{emp.name}}</td>
+             <td>{{emp.email}}</td>
+             <td>{{emp.salary}}</td>
+             <td>
+               <span class="edit" routerLink="/edit-emp/{{emp.id}}">Edit</span>&nbsp;&nbsp;
+               <span class="delete" (click)="deleteEmp(emp.id)">Delete</span>
+             </td>
+           </tr>
+         </tbody>
+       </table>
+    </div>
+  </div>
+
+  <div>
+    <button class="btn btn-outlone-primary" routerLink="/add-emp">Add Employee</button>
+  </div>
+</div>

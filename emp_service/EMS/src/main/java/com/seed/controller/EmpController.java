@@ -3,6 +3,7 @@ package com.seed.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.seed.entity.Employee;
 import com.seed.service.EmpService;
 
+@CrossOrigin
 @RestController
 public class EmpController {
 
@@ -23,6 +25,12 @@ public class EmpController {
 	@GetMapping("/employees")
 	public List<Employee> getEmployees() {
 		return empService.getAllEmployees();
+	}
+	
+	
+	@GetMapping("/employees/{id}")
+	public Employee getEmployeeById(@PathVariable Long id) {
+		return empService.getEmployeeDetail(id);
 	}
 
 	@PostMapping("/employees")

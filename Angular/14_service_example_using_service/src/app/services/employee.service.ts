@@ -10,6 +10,8 @@ export class EmployeeService {
 
   url:string = "http://localhost:3000/employees";
 
+  //url:string = "http://localhost:8080/employees";
+
   constructor(private http: HttpClient) { }
 
   httpOption = {
@@ -18,8 +20,8 @@ export class EmployeeService {
     })
   }
 
-  getEmployees() : Observable<Employee>{
-    return this.http.get<Employee>(this.url);
+  getEmployees() : Observable<Employee[]>{
+    return this.http.get<Employee[]>(this.url);
   }
 
   getEmployeeById(id:any) : Observable<Employee>{
